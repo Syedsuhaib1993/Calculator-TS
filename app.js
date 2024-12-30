@@ -17,6 +17,11 @@ function getans() {
         scr.value = "Error";
     }
 }
+function calculatePercentage() {
+    if (scr.value !== '' && !isNaN(scr.value)) {
+        scr.value = parseFloat(scr.value) / 100;
+    }
+}
 function getback() {
     // scr.value--
     scr.value = scr.value.substring(0, scr.value.length - 1);

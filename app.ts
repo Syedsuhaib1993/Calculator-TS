@@ -1,7 +1,7 @@
-let scr = document.getElementById('num') as HTMLInputElement
+let scr:any = document.getElementById('num') as HTMLInputElement
 // console.log(screen);
 
-function getNumber(num:string):void {
+function getNumber(num:number):void {
     scr.value += num
     console.log(num);
 
@@ -28,7 +28,11 @@ function getans():void{
             
     }
 }
-
+function calculatePercentage():void {
+    if (scr.value !== '' && !isNaN(scr.value)) {
+        scr.value = parseFloat(scr.value) / 100;
+    }
+}
 function getback():void{
     
     // scr.value--
