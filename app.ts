@@ -31,12 +31,9 @@ function getans():void{
 
 function getback():void{
     
-    let output = scr.value
-    // output.substring(0,output.length-1);
-  let mainoutput:any = output.length-1
-    console.log(mainoutput);
-    
+    // scr.value--
+    scr.value = scr.value.substring(0, scr.value.length - 1);  
 } 
     scr.value = ""
 
-    // p.value = inp.value.substring(0, inp.value.length - 1);
+    
