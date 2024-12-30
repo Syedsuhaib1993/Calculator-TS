@@ -17,23 +17,26 @@ function clearall():void{
 
 
 function getans():void{
+   
     try {
         console.log(scr.value);
-    let output = eval(scr.value)
-    console.log(output);
-    scr.value = output
-    
-    } catch (error) {
+        scr.value= eval(scr.value)          
+        
+    } catch  {
+        // let output = eval(scr.value)
+        scr.value = "Error"
             
     }
 }
 
-
-// function getback(){
+function getback():void{
     
-//     let output = eval(scr.value)
-//     output.length - 1
-//     console.log(output);
+    let output = scr.value
+    // output.substring(0,output.length-1);
+  let mainoutput:any = output.length-1
+    console.log(mainoutput);
     
-// } 
+} 
     scr.value = ""
+
+    // p.value = inp.value.substring(0, inp.value.length - 1);

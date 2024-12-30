@@ -9,15 +9,19 @@ function clearall() {
 }
 function getans() {
     try {
-        var output = eval(scr.value);
-        scr.value = output;
+        console.log(scr.value);
+        scr.value = eval(scr.value);
     }
-    catch (error) {
-        scr.value = 'Error'
+    catch (_a) {
+        // let output = eval(scr.value)
+        scr.value = "Error";
     }
 }
-// function getback(){
-//     let output = eval(scr.value)
-//     output.length - 1
-//     console.log(output);
-// } 
+function getback() {
+    var output = scr.value;
+    // output.substring(0,output.length-1);
+    var mainoutput = output.length - 1;
+    console.log(mainoutput);
+}
+scr.value = "";
+// p.value = inp.value.substring(0, inp.value.length - 1);
